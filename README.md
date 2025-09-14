@@ -9,11 +9,11 @@ Dashboard ini dibuat untuk mengeksplorasi dataset LEGO berdasarkan tema, harga, 
 
 Ringkasan Data
 
-- Total LEGO sets: 55
+- Total LEGO sets: 4.385
 
-- Rata-rata pieces: 216
+- Rata-rata pieces: 411
 
-- Rata-rata harga: $30.68
+- Rata-rata harga: $44.74
 
 Filter Interaktif
 
