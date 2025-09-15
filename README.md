@@ -49,6 +49,6 @@ Navigasi
 
 1. Dataset mencakup 4.385 LEGO sets dengan rata-rata 411 pieces dan harga rata-rata sekitar $44.74.
 
-2. Banyak set populer berasal dari tema ikonik seperti Star Wars, Harry Potter, dan Ninjago, yang menunjukkan dominasi franchise besar dalam penjualan LEGO.
+2. Di antara berbagai tema LEGO, City menduduki peringkat pertama dengan 445 set, diikuti Star Wars dengan 388 set, menandakan besarnya daya tarik kedua tema tersebut bagi penggemar.
 
 3. Rentang usia 5–9 tahun masih mendominasi jumlah set, menegaskan target utama LEGO adalah anak-anak usia sekolah dasar.
