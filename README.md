@@ -1,54 +1,113 @@
-🧩 Exploring LEGO Sets: Themes, Prices, and Pieces
+# 🧩 LEGO Set Explorer — Interactive Dashboard
 
-Dashboard ini dibuat untuk mengeksplorasi dataset LEGO berdasarkan tema, harga, dan jumlah pieces. Tujuannya adalah untuk memahami bagaimana LEGO sets bervariasi dalam hal ukuran, harga, serta segmentasi usia target.
+**📊 Build a custom, interactive tool to help users discover the perfect LEGO set**  
+Proyek ini merupakan bagian dari *guided project* dari [Maven Analytics](https://app.mavenanalytics.io/guided-projects/7ea2d5de-8a63-4c92-8350-b640d6df07d4), dengan tujuan membangun **dashboard interaktif di Power BI** untuk mengeksplorasi dataset LEGO berdasarkan **tema, harga, jumlah pieces**, dan **segmentasi usia**.
 
-📌 Dashboard ini merupakan bagian dari guided project Maven Analytics:
-[Maven LEGO Sets Guided Project](https://mavenanalytics.io/guided-projects/lego-set-explorer)
+---
 
-🔎 Fitur Utama
+## 🎯 Tujuan Proyek
+Membangun dashboard interaktif yang memungkinkan pengguna:
+- Menemukan set LEGO berdasarkan preferensi harga, tema, dan usia.
+- Mengeksplorasi distribusi harga, ukuran, dan variasi tema LEGO.
+- Melakukan analisis mendalam terhadap data menggunakan *visuals*, *slicers*, dan *bookmarks* di Power BI.
 
-Ringkasan Data
+---
 
-- Total LEGO sets: 4.385
+## 🧠 Langkah Pengerjaan
 
-- Rata-rata pieces: 411
+### 🧩 Objective 1: Load & Prepare the Data
+- Menghubungkan dataset `lego_sets.csv`  
+- Menghapus kolom yang tidak relevan: `minifigs`, `bricksetURL`, `thumbnailURL`
+- Memastikan tipe data sesuai dan memfilter set tanpa nilai harga, usia, pieces, atau URL gambar  
+- Membuat kolom tambahan:
+  - **Age Range:**
+    - 1–4 → “1 to 4”
+    - 5–9 → “5 to 9”
+    - 10–17 → “10 to 17”
+    - 18+ → “Over 18”
+  - **Price Range:**
+    - > $500 → `$$$$$`
+    - > $100 → `$$$$`
+    - > $50 → `$$$`
+    - > $25 → `$$`
+    - ≤ $25 → `$`
+- Menambahkan *measures*:
+  - `Total Sets`
+  - `Total Groups`
+  - `Avg. Age`
+  - `Avg. Price`
+  - `Avg. Pieces`
 
-- Rata-rata harga: $44.74
+---
 
-Filter Interaktif
+### 🎨 Objective 2: Design the Report Layout
+- Mendesain *layout* dashboard berdasarkan insight dan kebutuhan eksplorasi pengguna  
+- Menambahkan elemen visual:
+  - **Cards:** Total Sets, Avg. Pieces, Avg. Price  
+  - **Slicers:** Theme Group, Theme, Age Range  
+  - **Table:** Menampilkan `Name`, `Set ID`, `Theme`, `Age Range`, `Avg. Pieces`, `Avg. Price`, `Price Range`  
+- Menyediakan halaman detail set:
+  - Menampilkan gambar, nama, tahun, harga, jumlah pieces, dan usia target  
+  - Placeholder untuk beberapa pilihan set  
+- Mengatur interaksi visual agar tabel tidak memengaruhi kartu ringkasan
 
-- Filter berdasarkan Theme Group, Theme, dan Age Range
+---
 
-- Slicer Max Price untuk membatasi harga set
+### ⚙️ Objective 3: Add Interactivity
+- Menambahkan **parameter** `Max Price` (0–850, increment 5) untuk filter harga maksimum  
+- Mengaktifkan **tooltips** untuk menampilkan gambar LEGO saat *hover*  
+- Membuat **bookmark & button actions**:
+  - Tombol “Reset Filter” untuk mengembalikan ke tampilan default  
+- Membuat halaman kedua:
+  - **Decomposition Tree** untuk analisis mendalam berdasarkan kategori, theme group, theme, dan nama  
+  - **Navigasi antar halaman** dengan tombol interaktif  
 
-- Tombol Reset Filter untuk mengembalikan ke tampilan default
+---
 
-Detail Set LEGO
+## 🔍 Hasil Akhir: LEGO Sets Dashboard
 
-- Tabel interaktif berisi nama set, ID, tema, rentang usia, jumlah pieces, dan harga
+### 📊 Ringkasan Data
+| Metrik | Nilai |
+|--------|--------|
+| Total LEGO Sets | **4,385** |
+| Rata-rata Pieces | **411** |
+| Rata-rata Harga | **$44.74** |
 
-- Visualisasi detail per set (gambar, tahun rilis, harga, nama set)
+---
 
-Navigasi
-
-- Halaman Dashboard untuk overview data
-
-- Halaman Decomposition Page untuk analisis lebih mendalam berdasarkan kategori, tema group, tema, dan nama
-
-📊 Tools yang Digunakan
-
-* Microsoft Power BI (data modeling, slicer, decomposition tree, card visual)
-
-* Data preprocessing untuk membersihkan dan menyiapkan dataset LEGO
-
-📸 Hasil Dashboard
-
+### 📸 Cuplikan Dashboard
 <img width="759" height="428" alt="image" src="https://github.com/user-attachments/assets/cdf5c3b0-8ecb-4035-90d3-945b5dcb56ab" />
 
-🎯 Insight Potensial
+---
 
-1. Dataset mencakup 4.385 LEGO sets dengan rata-rata 411 pieces dan harga rata-rata sekitar $44.74.
+### 🔎 Fitur Utama
+- Filter interaktif: *Theme Group*, *Theme*, *Age Range*  
+- Slicer *Max Price* untuk membatasi harga set  
+- Tombol *Reset Filter* untuk mengembalikan ke tampilan default  
+- Tabel interaktif berisi nama set, ID, tema, usia, pieces, dan harga  
+- Halaman *Decomposition Tree* untuk analisis hierarkis  
 
-2. Di antara berbagai tema LEGO, City menduduki peringkat pertama dengan 445 set, diikuti Star Wars dengan 388 set, menandakan besarnya daya tarik kedua tema tersebut bagi penggemar.
+---
 
-3. Rentang usia 5–9 tahun masih mendominasi jumlah set, menegaskan target utama LEGO adalah anak-anak usia sekolah dasar.
+## 🎯 Insight Potensial
+- Dataset mencakup **4.385 LEGO sets** dengan rata-rata **411 pieces** dan **harga $44.74**
+- Tema **City** menempati posisi teratas (445 set), diikuti **Star Wars** (388 set)
+- Rentang usia **5–9 tahun** mendominasi, menunjukkan target utama LEGO adalah anak-anak usia sekolah dasar
+
+---
+
+## 🛠️ Tools & Teknologi
+- **Microsoft Power BI** – data modeling, visualisasi, interaktivitas (*slicer, bookmarks, decomposition tree*)  
+- **Excel / CSV Data** – pembersihan dan transformasi awal dataset LEGO  
+- **Maven Analytics Guided Project** – sumber pembelajaran & referensi tugas  
+
+---
+
+## ✍️ Author
+**ricki309**  
+📘 Guided Project: [Maven LEGO Sets Explorer](https://app.mavenanalytics.io/guided-projects/7ea2d5de-8a63-4c92-8350-b640d6df07d4)  
+📂 Repository ini berisi dokumentasi dan hasil akhir dashboard — *kode atau dataset asli bersifat privat.*
+
+---
+
+
