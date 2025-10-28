@@ -75,8 +75,12 @@ Membangun dashboard interaktif yang memungkinkan pengguna:
 
 ---
 
-### 📸 Cuplikan Dashboard
-<img width="759" height="428" alt="image" src="https://github.com/user-attachments/assets/cdf5c3b0-8ecb-4035-90d3-945b5dcb56ab" />
+## 📸 Preview Visualisasi
+
+<p align="center">
+  <img src="visuals/visuals_dashboard_lego_exploere.png" alt="Average Price by Neighbourhood" width="48%">
+  <img src="visuals/decomposition_tree_lego.png" alt="Average Price by Accommodates" width="48%">
+</p>
 
 ---
 
