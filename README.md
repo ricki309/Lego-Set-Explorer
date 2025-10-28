@@ -78,8 +78,8 @@ Membangun dashboard interaktif yang memungkinkan pengguna:
 ## 📸 Preview Visualisasi
 
 <p align="center">
-  <img src="visuals/visuals_dashboard_lego_exploere.png" alt="Average Price by Neighbourhood" width="48%">
-  <img src="visuals/decomposition_tree_lego.png" alt="Average Price by Accommodates" width="48%">
+  <img src="visuals/visuals_dashboard_lego_exploere.PNG" alt="Average Price by Neighbourhood" width="48%">
+  <img src="visuals/decomposition_tree_lego.PNG" alt="Average Price by Accommodates" width="48%">
 </p>
 
 ---
